@@ -3,6 +3,7 @@ import { SignInButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs';
 import Link from 'next/link';
 
 import { checkUser } from '@/lib/checkUser';
+import Image from 'next/image';
 
 export default async function Navbar() {
   const user = await checkUser();
@@ -14,9 +15,7 @@ export default async function Navbar() {
         <div className='flex items-center justify-between h-16'>
           <div className='flex items-center'>
             <Link href='/' className='flex-shrink-0'>
-              <span className='text-md sm:text-2xl font-bold bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 bg-clip-text text-transparent'>
-                SleepTracker
-              </span>
+              <Image src="/logo.png" alt="logo" width={80} height={70} className='' />
             </Link>
           </div>
 

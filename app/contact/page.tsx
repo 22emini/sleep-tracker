@@ -6,8 +6,6 @@ const ContactPage = () => {
   const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
-    const [subject, setSubject] = useState('');
-    const [showSuccessModal, setShowSuccessModal] = useState(false);
     const [isSubmitting, setIsSubmitting] = useState(false);
     const form = useRef<HTMLFormElement>(null);
 
@@ -39,7 +37,6 @@ const ContactPage = () => {
               setName('');
               setEmail('');
               setMessage('');
-              setSubject('');
               // Show success modal
              toast.success("Message sent Sucessfully")
               setIsSubmitting(false);
